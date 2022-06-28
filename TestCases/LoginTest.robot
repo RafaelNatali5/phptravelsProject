@@ -33,11 +33,10 @@ Alterar dados
     Ir para meu perfil
     Preencher informações da alteração
     Clicar no botão de Update
+    Comparar valores
     Sleep       4s
 
-Verificar dados
-    Acessar o site principal
-    Logar com login e senha corretos
-    Ir para meu perfil
-    Sleep       10s
+
+
+
     
