@@ -18,7 +18,6 @@ Realizar login com falha
     Logar com login e senha incorreta
     Deve apresentar Error
 
-
 Registro de usuario
     [Tags]      login   registro
     Acessar o site de Registro
