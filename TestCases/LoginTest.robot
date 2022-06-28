@@ -24,3 +24,10 @@ Registro de usuario
     Preencher as informações da tela
     Clicar em Registrar
     Deve ser redirecionado para a tela de login
+
+Alterar dados
+    Acessar o site principal
+    Logar com login e senha corretos
+    Ir para meu perfil
+    Realize alteração dos nomes
+    
