@@ -6,7 +6,7 @@ ${txtUsername}      xpath://input[@placeholder="Email"]
 ${txtPassword}      xpath://input[@placeholder="Password"]
 ${btnLogin}         xpath://button[./span[text()="Login"]]
 ${lblLogin}         xpath://h5[contains(text(),"Login")]
-
+${lblError}         xpath://div[@class="alert alert-danger failed"]
 ***Keywords
 #Funções
 
@@ -28,6 +28,12 @@ Realize login
     Escrever login      ${username}
     Escrever senha      ${password}
     Clicar botao login
+
+Verificar label Login
+    Wait Until Page Contains Element        ${lblLogin}
+
+Verificar label Error
+    Wait Until Page Contains Element        ${lblError}
     
 #Passos
 Acessar o site principal
@@ -37,9 +43,15 @@ Acessar o site principal
 Logar com login e senha corretos
     Realize login       user@phptravels.com       demouser
 
+Logar com login e senha incorreta
+    Realize login       email_incorreto@phptravels.com       senhaIncorreta
+
 Deve ser redirecionado para a tela de produtos
     Verificar label Products
 
-Verificar label Login
-    Wait Until Page Contains Element        ${lblLogin}
+Deve apresentar Error
+    Verificar label Error
+
+
+
 

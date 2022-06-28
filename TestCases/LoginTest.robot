@@ -12,6 +12,13 @@ Realizar login com sucesso
     Logar com login e senha corretos
     Deve ser redirecionado para a tela de produtos
 
+Realizar login com falha
+    [Tags]      login   loginFalha
+    Acessar o site principal
+    Logar com login e senha incorreta
+    Deve apresentar Error
+
+
 Registro de usuario
     [Tags]      login   registro
     Acessar o site de Registro
