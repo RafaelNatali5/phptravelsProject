@@ -1,6 +1,7 @@
 ***Settings***
 Resource        ../Pages/LoginPage.robot
 Resource        ../Pages/SignupPage.robot
+Resource        ../Pages/ProfilePage.robot
 
 Test Setup          Open Session
 Test Teardown       Close Session
@@ -26,8 +27,17 @@ Registro de usuario
     Deve ser redirecionado para a tela de login
 
 Alterar dados
+   # Tirar cookie
     Acessar o site principal
     Logar com login e senha corretos
     Ir para meu perfil
-    Realize alteração dos nomes
+    Preencher informações da alteração
+    Clicar no botão de Update
+    Sleep       4s
+
+Verificar dados
+    Acessar o site principal
+    Logar com login e senha corretos
+    Ir para meu perfil
+    Sleep       10s
     
