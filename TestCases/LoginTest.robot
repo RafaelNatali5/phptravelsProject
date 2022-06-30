@@ -32,9 +32,10 @@ Alterar dados
     Acessar o site principal
     Logar com login e senha corretos
     Ir para meu perfil
-    Preencher informações da alteração
+    Preencher o novo nome
     Clicar no botão de Update
-    Comparar valor
+    Deve apresentar sucesso na alteração
+
 
 
 

@@ -3,34 +3,44 @@ Resource        ../Infra/base.robot
 Resource        ./AccountPage.robot
 ***Variables***
 ${txtprofFirstname}=         xpath://input[@name="firstname"]
-${btnUpdate}=                xpath://*[@id="fadein"]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/form/div[3]/button
-${txtFirstnameValue}=       Get WebElement     xpath://input[@name="firstname"]
-#${btnGotIt}=                 xpath://button[@id="cookie_stop"]
-${novoNome}=        NovoNome
+${btnUpdate}=                xpath://button[@type="submit"]
+#${btnGotIt}=                xpath://button[@id="cookie_stop"]
+${lblSuccess}=               xpath://div[@class="alert alert-success"]               
 
 ***Keywords***
 #Tirar cookie
    # Click button       ${btnGotIt}
-Alterar primeiro nome
-    [Arguments]     ${firstname}
-    Input Text      ${txtprofFirstname}      ${firstname}
+Escrever novo primeiro nome
+    [Arguments]     ${newfirstname}
+    Input Text      ${txtprofFirstname}      ${newfirstname}
+    Comparar valor  ${newfirstname}
 
 
-Realize alteração dos nomes
-    [Arguments]     ${firstname}
-    Alterar primeiro nome  ${firstname}
+Realize preenchimento do novo nome
+    [Arguments]         ${newfirstname}     
+    Escrever novo primeiro nome              ${newfirstname}
 
-Preencher informações da alteração
-    Realize alteração dos nomes     ${novoNome}
+Preencher o novo nome
+    ${newfirstname}=                        Sortear Nome
+    Realize preenchimento do novo nome      ${newfirstname}
     
 
 Clicar no botão de Update   
 #Não consegui fazer com o click pois ele estava sendo interceptado, mesmo clicando no cookie.
     Press keys        NONE      ENTER
 
+Verifical label sucesso
+    Wait Until Page Contains Element        ${lblSuccess}
+
 Comparar valor
-    ${txtFirstnameValue}=       Get Element Attribute     xpath://input[@name="firstname"]     value
-    Should Be Equal     ${novoNome}    ${txtFirstnameValue}
+    [Arguments]     ${newfirstname}
+    ${firstnamecapture}=       Get Element Attribute     xpath://input[@name="firstname"]     value
+    Should Be Equal     ${newfirstname}   ${firstnamecapture}
+
+Deve apresentar sucesso na alteração
+    Verifical label sucesso
+
+    
 
 
    
