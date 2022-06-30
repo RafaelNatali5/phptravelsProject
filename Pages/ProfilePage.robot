@@ -15,30 +15,26 @@ Alterar primeiro nome
     [Arguments]     ${firstname}
     Input Text      ${txtprofFirstname}      ${firstname}
 
-Alterar ultimo nome
-    [Arguments]     ${lastname}
-    Input Text      ${txtprofLastname}      ${lastname}
-
 Captura nome
     [Arguments]     ${firstnamevalue}
     Input Text      ${txtFirstnameValue}      ${firstnamevalue}
 
 Realize alteração dos nomes
-    [Arguments]     ${firstname}        ${lastname} 
+    [Arguments]     ${firstname}
     Alterar primeiro nome  ${firstname}
-    Alterar ultimo nome  ${lastname}
 
 Preencher informações da alteração
-    ${firstname}=       PrimeiroNomeAlterado
-    ${lastname}=        UltimoNomeAlterado
-    Realize alteração dos nomes  ${firstname}  ${lastname}
+    ${firstname}=       Sortear Nome
+    Realize alteração dos nomes  ${firstname}
+    Comparar valores        ${firstname}
 
 Clicar no botão de Update   
 #Não consegui fazer com o click pois ele estava sendo interceptado, mesmo clicando no cookie.
     Press keys        NONE      ENTER
 
 Comparar valores
-    Should Be Equal As Strings    PrimeiroNomeAlterado    ${firstnamevalue}
+    [Arguments]     ${firstname}
+    Should Be Equal As Strings    ${firstname}    ${firstnamevalue}
    
     Sleep       50s
     
