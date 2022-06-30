@@ -27,14 +27,14 @@ Registro de usuario
     Deve ser redirecionado para a tela de login
 
 Alterar dados
+    [Tags]      alteracao
    # Tirar cookie
     Acessar o site principal
     Logar com login e senha corretos
     Ir para meu perfil
     Preencher informações da alteração
     Clicar no botão de Update
-    Comparar valores
-    Sleep       4s
+    Comparar valor
 
 
 
