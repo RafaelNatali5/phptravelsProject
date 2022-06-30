@@ -36,7 +36,9 @@ Verifical label sucesso
 Comparar valor
     [Arguments]     ${newfirstname}
     ${firstnamecapture}=       Get Element Attribute     xpath://input[@name="firstname"]     value
-    Should Be Equal     ${newfirstname}   ${firstnamecapture}
+    Should Be Equal     ${newfirstname}     ${firstnamecapture}
+    Log to console      ${newfirstname}     
+    Log to console      ${firstnamecapture}
 
 Deve apresentar sucesso na alteração
     Verifical label sucesso
