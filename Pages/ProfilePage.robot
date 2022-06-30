@@ -3,7 +3,7 @@ Resource        ../Infra/base.robot
 Resource        ./AccountPage.robot
 ***Variables***
 ${txtprofFirstname}=         xpath://input[@name="firstname"]
-${btnUpdate}=                xpath://button[@type="submit"]
+#${btnUpdate}=                xpath://button[@type="submit"]
 #${btnGotIt}=                xpath://button[@id="cookie_stop"]
 ${lblSuccess}=               xpath://div[@class="alert alert-success"]               
 
@@ -27,6 +27,7 @@ Preencher o novo nome
 
 Clicar no botão de Update   
 #Não consegui fazer com o click pois ele estava sendo interceptado, mesmo clicando no cookie.
+    #Click button      ${btnUpdate}  
     Press keys        NONE      ENTER
 
 Verifical label sucesso
