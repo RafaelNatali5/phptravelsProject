@@ -60,9 +60,9 @@ Preencher as informações da tela
     ${phone}=           Sortear Telefone
     ${password}=        Sortear Senha
 
-    Realize preenchimento  ${firstname}  ${lastname}  ${email}  ${phone}  ${password}
-    Click Element       ${account_type}
-    Selecionar Tipo     Agent
+    Realize preenchimento   ${firstname}  ${lastname}  ${email}  ${phone}  ${password}
+    Click Element           ${account_type}
+    Selecionar Tipo         Agent
 
 Clicar em Registrar
     Clicar botao signup 

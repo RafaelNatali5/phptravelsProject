@@ -2,15 +2,15 @@
 Resource        ../Infra/base.robot
 Resource        ./AccountPage.robot
 ***Variables***
-${txtprofFirstname}=         xpath://input[@name="firstname"]
-#${btnUpdate}=                xpath://button[@type="submit"]
-#${btnGotIt}=                xpath://button[@id="cookie_stop"]
-${lblSuccess}=               xpath://div[@class="alert alert-success"]               
+${txtprofFirstname}=            xpath://input[@name="firstname"]
+#${btnUpdate}=                  xpath://button[@type="submit"]
+#${btnGotIt}=                   xpath://button[@id="cookie_stop"]
+${lblSuccess}=                  xpath://div[@class="alert alert-success"]               
 
 ***Keywords***
 #Tirar cookie
    # Click button       ${btnGotIt}
-   
+
 Escrever novo primeiro nome
     [Arguments]     ${newfirstname}
     Input Text      ${txtprofFirstname}      ${newfirstname}
@@ -37,9 +37,9 @@ Verifical label sucesso
 Comparar valor
     [Arguments]     ${newfirstname}
     ${firstnamecapture}=       Get Element Attribute     xpath://input[@name="firstname"]     value
-    Should Be Equal     ${newfirstname}     ${firstnamecapture}
-    Log to console      ${newfirstname}     
-    Log to console      ${firstnamecapture}
+    Should Be Equal             ${newfirstname}     ${firstnamecapture}
+    Log to console              ${newfirstname}     
+    Log to console              ${firstnamecapture}
 
 Deve apresentar sucesso na alteração
     Verifical label sucesso

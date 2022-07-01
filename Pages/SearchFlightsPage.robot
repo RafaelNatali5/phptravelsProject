@@ -32,7 +32,7 @@ Realizar preenchimento do voo
     Escrever qual será o destino            ${Destination}
 
 Preencher informações do voo
-    Realizar preenchimento do voo  gru      jpa 
+    Realizar preenchimento do voo       gru      jpa 
 
 Clicar em procurar
     Click botão procurar
