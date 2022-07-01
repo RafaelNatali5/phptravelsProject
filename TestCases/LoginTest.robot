@@ -43,6 +43,8 @@ Buscar voo
     Acessar o site de voo
     Preencher informações do voo
     Clicar em procurar
+    Deve apresentar contador de voos
+
 
 
 

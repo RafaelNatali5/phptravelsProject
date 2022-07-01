@@ -1,6 +1,9 @@
 ***Settings***
 Resource        ../Infra/base.robot
 Resource        ../Pages/LoginPage.robot
+Resource        ./FlightsPage.robot
+                
+
 
 
 **Variables***
@@ -22,7 +25,7 @@ Click botão procurar
 
 Acessar o site de voo
     Ir Para         flights  
-      
+
 Realizar preenchimento do voo
     [Arguments]     ${From}     ${Destination}
     Escrever de onde será a partida         ${From}
@@ -33,3 +36,6 @@ Preencher informações do voo
 
 Clicar em procurar
     Click botão procurar
+
+Deve apresentar contador de voos
+    Verificar contador de voos
