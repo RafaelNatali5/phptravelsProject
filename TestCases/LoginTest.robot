@@ -28,7 +28,7 @@ Registro de usuario
     Deve ser redirecionado para a tela de login
 
 Alterar dados
-    [Tags]      login alteracao
+    [Tags]      login   alteracao
    # Tirar cookie
     Acessar o site principal
     Logar com login e senha corretos
@@ -38,6 +38,7 @@ Alterar dados
     Deve apresentar sucesso na alteração
 
 Buscar voo
+    [Tags]      login   voos
     Acessar o site principal
     Logar com login e senha corretos
     Acessar o site de voo
