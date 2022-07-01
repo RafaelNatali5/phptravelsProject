@@ -10,7 +10,7 @@ Verificar label Products
     Wait Until Page Contains Element        ${lblProducts}
 
 Ir para meu perfil
-    Go To           https://www.phptravels.net/account/profile
+    Ir Para         account/profile
 
 Clicar botão profile
     Click button        ${btnProfile}  

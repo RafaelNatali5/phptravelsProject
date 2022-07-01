@@ -2,6 +2,7 @@
 Resource        ../Pages/LoginPage.robot
 Resource        ../Pages/SignupPage.robot
 Resource        ../Pages/ProfilePage.robot
+Resource        ../Pages/SearchFlightsPage.robot
 
 Test Setup          Open Session
 Test Teardown       Close Session
@@ -27,7 +28,7 @@ Registro de usuario
     Deve ser redirecionado para a tela de login
 
 Alterar dados
-    [Tags]      alteracao
+    [Tags]      login alteracao
    # Tirar cookie
     Acessar o site principal
     Logar com login e senha corretos
@@ -35,6 +36,13 @@ Alterar dados
     Preencher o novo nome
     Clicar no botão de Update
     Deve apresentar sucesso na alteração
+
+Buscar voo
+    Acessar o site principal
+    Logar com login e senha corretos
+    Acessar o site de voo
+    Preencher informações do voo
+    Clicar em procurar
 
 
 
